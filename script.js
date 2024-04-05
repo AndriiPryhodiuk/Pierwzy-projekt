@@ -1,8 +1,18 @@
 let krug = document.querySelector(".krug");
-let spin = document.getElementById("button");
-spin.onclick = function () {
-    let number = Math.ceil(Math.random() * 1000);
-    krug.style.transform = "rotate(" + number + "deg)";
+let spinButton = document.getElementById("button");
+let strilka = document.querySelector(".strilka");
+const offset = -22.5;
+const rozmiarSectora = 45;
 
-    let sector = Math.floor(number / 45) + 1;
+spinButton.onclick = function () {
+    let stopnie = Math.ceil(Math.random() * 3600);
+    krug.style.transform = "rotate(" + -stopnie + "deg)";
+    const realStopni = stopnie % 360;
+    const numerSectora = policzSektor(realStopni);
 };
+
+function policzSektor(realStopni) {
+    const numerSectora = (realStopni - offset) / rozmiarSectora;
+
+    return Math.ceil(numerSectora);
+}

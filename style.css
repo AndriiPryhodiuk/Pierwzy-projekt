@@ -19,9 +19,9 @@ body {
     border: 15px solid #dde;
     border-radius: 50%;
     background-color: #FFFAF0;
-    transition: 5s;
+    transition: 5s ease-in-out;
     overflow: hidden;
-    position: relative;
+    position: absolute;
 }
 
 .krug div {
@@ -38,7 +38,8 @@ body {
     font-size: 20px;
     left: 135px;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
+    font-size: 3em;
 }
 
 .krug .piersze {
@@ -85,7 +86,7 @@ body {
     position: absolute;
     top: 0;
     left: 50%;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     transform: translateX(-50%);
     font-size: 50px;
     z-index: 100;
